@@ -1,0 +1,10 @@
+let pessoa = {
+  nome: "Laura",
+  salario: 1500, 
+  idade: 32, 
+  diploma: true
+};
+console.log("Nome: " + pessoa.nome);
+console.log("Salário: " + pessoa.salario);
+console.log("Idade: " + pessoa.idade);
+console.log("Possui diploma: " + (pessoa.diploma ? "Sim" : "Não"));
