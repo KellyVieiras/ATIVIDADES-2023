@@ -1,0 +1,21 @@
+function saudacao() {
+  console.log("Olá! Bem-vindo(a) ao nosso programa.");
+}
+function calcularSoma(a, b) {
+  let soma = a + b;
+  console.log(`A soma de ${a} e ${b} é igual a ${soma}.`);
+}
+
+function calcularMedia(numeros) {
+  let soma = numeros.reduce((total, numero) => total + numero, 0);
+  let media = soma / numeros.length;
+  return media;
+}
+
+saudacao(); 
+
+calcularSoma(5, 7);
+
+let listaNumeros = [2, 4, 6, 8, 10];
+let media = calcularMedia(listaNumeros);
+console.log(`A média dos números ${listaNumeros} é igual a ${media}.`);
