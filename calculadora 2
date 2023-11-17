@@ -1,0 +1,29 @@
+let num1 = parseFloat(prompt("Digite o primeiro número: "));
+let num2 = parseFloat(prompt("Digite o segundo número: "));
+let operador = prompt("Digite o operador aritmético desejado (+, -, *, /): ");
+
+let resultado;  
+
+switch (operador) {
+    case "+":
+        resultado = num1 + num2;
+        break;
+    case "-":
+        resultado = num1 - num2;
+        break;
+    case "*":
+        resultado = num1 * num2;
+        break;
+    case "/":
+        let quociente = Math.floor(num1 / num2);  
+        let resto = num1 % num2;  
+        console.log("Resultado da divisão: " + quociente);
+        console.log("Sobra da divisão: " + resto);
+        break;
+    default:
+        console.log("Operador inválido!");
+}
+
+if (operador !== "/") {
+    console.log("Resultado: " + resultado);
+}
