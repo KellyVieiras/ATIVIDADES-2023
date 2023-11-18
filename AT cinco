@@ -1,0 +1,51 @@
+/ Objeto material - Carro
+const carro = {
+  marca: "Toyota",
+  modelo: "Corolla",
+  ano: 2020,
+  ligar: function() {
+    console.log("Carro ligado");
+  },
+  acelerar: function() {
+    console.log("Carro acelerando");
+  },
+  frear: function() {
+    console.log("Carro freando");
+  }
+};
+
+console.log(carro.marca);
+carro.ligar();
+carro.acelerar();
+carro.frear();
+
+const contaBancaria = {
+  numero: "123456",
+  saldo: 1000,
+  titular: "João",
+  depositar: function(valor) {
+    this.saldo += valor;
+    console.log("Depósito realizado. Novo saldo: " + this.saldo);
+  },
+  sacar: function(valor) {
+    if (valor <= this.saldo) {
+      this.saldo -= valor;
+      console.log("Saque realizado. Novo saldo: " + this.saldo);
+    } else {
+      console.log("Saldo insuficiente");
+    }
+  },
+  transferir: function(valor, contaDestino) {
+    if (valor <= this.saldo) {
+      this.saldo -= valor;
+      contaDestino.saldo += valor;
+      console.log("Transferência realizada. Novo saldo: " + this.saldo);
+    } else {
+      console.log("Saldo insuficiente");
+    }
+  }
+};
+
+console.log(contaBancaria.titular);
+contaBancaria.depositar(500);
+contaBancaria.sacar(200);
